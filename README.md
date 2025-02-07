@@ -13,6 +13,8 @@ Flickr8k_text.zip https://github.com/jbrownlee/Datasets/releases/download/Flickr
 Loaded images from Flickr8k_Dataset.
 Loaded captions from Flickr8k_text.
 Preprocessed captions (tokenized, removed special characters, padded sequences).
+
+
 ✅ Step 2: Prepared Captions as Model Input
 
 Converted text captions into numerical sequences.
