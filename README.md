@@ -7,14 +7,13 @@ Please refer to Jason Brownlee's GITHUB link to Download Flickr_8k dataset
 Flickr8k_Dataset.zip https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_Dataset.zip
 
 Flickr8k_text.zip https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_text.zip
-The Above Datasets
-1. Resized Images
-	•	Loaded images from the Flickr8k Dataset.
-	•	Resized each image to 224x224 pixels for consistency.
 
-2. Tokenized Captions
-	•	Loaded captions from Flickr8k.token.txt.
-	•	Converted all text to lowercase.
-	•	Removed punctuation to simplify processing.
-	•	Tokenized the captions into words.
-	•	Added  and  tokens to mark sentence boundaries.
+✅ Step 1: Load and Preprocess the Dataset
+
+Loaded images from Flickr8k_Dataset.
+Loaded captions from Flickr8k_text.
+Preprocessed captions (tokenized, removed special characters, padded sequences).
+✅ Step 2: Prepared Captions as Model Input
+
+Converted text captions into numerical sequences.
+Applied padding to make sequences uniform in length.
