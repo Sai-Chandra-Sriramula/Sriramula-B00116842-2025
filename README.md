@@ -19,3 +19,11 @@ Preprocessed captions (tokenized, removed special characters, padded sequences).
 
 Converted text captions into numerical sequences.
 Applied padding to make sequences uniform in length.
+
+since we have completed Data Prrprocessing, now we are movibg to build CNN-RNN model(prebuild and some manual Build tools) this week.
+We'll use a model that consists of:
+
+CNN (Encoder): A pretrained model like Inception to extract image features.
+RNN (Decoder): An LSTM or GRU to generate captions.
+
+iam working to build this model which aligns to requirements of my project.
