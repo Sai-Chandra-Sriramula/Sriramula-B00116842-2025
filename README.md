@@ -28,3 +28,9 @@ CNN (Encoder): A pretrained model like Inception to extract image features.
 RNN (Decoder): An LSTM or GRU to generate captions.
 
 In This Week i am working to build this model which aligns to requirements of my project.
+
+
+NOTE :-
+hey professor when iam uploading my code source file to github, its uploading perfectly fine but when i open that file its not opening its sayinng "Unable to render code block"
+
+i would like to scedule meeting regarding this problem even last week i couldnt resolve this.
