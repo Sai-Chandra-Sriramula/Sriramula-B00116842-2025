@@ -15,18 +15,14 @@ Loaded captions from Flickr8k_text.
 Preprocessed captions (tokenized, removed special characters, padded sequences).
 
 
-✅ Step 2: Prepared Captions as Model Input
+1️- Extracting Image Features with CNN (ResNet-50)
+Imagine looking at a picture and identifying key details—like a dog, a beach, or a sunset. That’s what ResNet-50 will do for us! It will scan images and break them down into meaningful patterns (2048-number summaries) that our model can understand.
 
-Converted text captions into numerical sequences.
-Applied padding to make sequences uniform in length.
+2️- Turning Features into Words with RNN (LSTM)
+Now, we need to turn those image patterns into words. Our LSTM (a type of RNN) will act like a storyteller. It will take the image’s features and start forming a sentence—one word at a time—predicting what comes next based on what it has seen so far.
 
-since we have completed Data Prrprocessing, now we are movibg to build CNN-RNN model(prebuild and some manual Build tools) this week.
-We'll use a model that consists of:
-
-CNN (Encoder): A pretrained model like Inception to extract image features.
-
-RNN (Decoder): An LSTM or GRU to generate captions.
-
+3️- Building the Full Captioning Model
+This is where we connect the dots! The CNN extracts features, passes them to the LSTM, and the LSTM generates captions. The goal? Train this model so it learns to describe images just like a human would.
 In This Week i am working to build this model which aligns to requirements of my project.
 
 
