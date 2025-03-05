@@ -25,6 +25,10 @@ Now, we need to turn those image patterns into words. Our LSTM (a type of RNN) w
 This is where we connect the dots! The CNN extracts features, passes them to the LSTM, and the LSTM generates captions. The goal? Train this model so it learns to describe images just like a human would.
 In This Week i am working to build this model which aligns to requirements of my project.
 
+latest update 3-2-2025
+i have worked on model building using transfrormers, i have used CNN as encoder and rnn and decoder.
+then i have worked on traing the model.
+while traing the model i have triggered multile problems majorly training it, the epoches are more and due to model complexity each epoch traing taking longer time then usual.
 
 NOTE :-
 hey professor when iam uploading my code source file to github, its uploading perfectly fine but when i open that file its not opening its sayinng "Unable to render code block"
