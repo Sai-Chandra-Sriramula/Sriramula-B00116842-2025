@@ -1,4 +1,4 @@
-The Flickr8k_dataset is available for free from Illinois.edu website.Please use the link below to request the dataset: "https://illinois.edu/fb/sec/1713398"
+The Flickr8k_dataset is available for free from Illinois.edu website.
 
 The official edu site is not hosting the dataset at the current time.
 
