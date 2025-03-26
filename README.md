@@ -22,7 +22,7 @@ Imagine looking at a picture and identifying key details—like a dog, a beach, 
 Now, we need to turn those image patterns into words. Our LSTM (a type of RNN) will act like a storyteller. It will take the image’s features and start forming a sentence—one word at a time—predicting what comes next based on what it has seen so far.
 
 3️- Building the Full Captioning Model
-This is where we connect the dots! The CNN extracts features, passes them to the LSTM, and the LSTM generates captions. The goal? Train this model so it learns to describe images just like a human would.
+This is where we connect the dots! The CNN extracts features, passes them to the LSTM, and the LSTM generates captions. The goal? Train this model so it learns to describe images just like a human would
 In This Week i am working to build this model which aligns to requirements of my project.
 
 latest update 3-2-2025
