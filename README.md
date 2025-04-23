@@ -1,36 +1,82 @@
-The Flickr8k_dataset is available for free from Illinois.edu website.
+# Image Captioning System using DenseNet201, Xception, and InceptionV3 with Attention Mechanism  
+**Spring 2025 Project – Sai Chandra Sriramula (B00116842)**
 
-The official edu site is not hosting the dataset at the current time.
+---
 
-Please refer to Jason Brownlee's GITHUB link to Download Flickr_8k dataset
+##  Project Overview
 
-Flickr8k_Dataset.zip https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_Dataset.zip
+This project explores the task of automatic image captioning using deep learning. The model combines CNN-based visual feature extraction with an RNN-based sequence generator enhanced with an attention mechanism. Specifically, three different CNN backbones — **DenseNet201**, **Xception**, and **InceptionV3** — are compared in terms of their performance in generating image descriptions.
 
-Flickr8k_text.zip https://github.com/jbrownlee/Datasets/releases/download/Flickr8k/Flickr8k_text.zip
+Key features of the project:
+-  **CNN Backbones**: Feature extraction using pretrained DenseNet201, Xception, and InceptionV3 (on ImageNet)
+-  **Caption Generator**: GRU-based Recurrent Neural Network (RNN)
+-  **Attention Mechanism**: Helps focus on important regions of the image while predicting each word
+-  **Evaluation**: Comparison using BLEU scores to measure caption quality
 
-✅ Step 1: Load and Preprocess the Dataset
+>  **Real-world application**: The system can be adapted for **medical imaging**, where automatic captioning of diagnostic images (e.g., X-rays, MRIs) can assist in reporting and accessibility.
 
-Loaded images from Flickr8k_Dataset.
-Loaded captions from Flickr8k_text.
-Preprocessed captions (tokenized, removed special characters, padded sequences).
+---
 
+##  Dataset Information
 
-1️- Extracting Image Features with CNN (ResNet-50)
-Imagine looking at a picture and identifying key details—like a dog, a beach, or a sunset. That’s what ResNet-50 will do for us! It will scan images and break them down into meaningful patterns (2048-number summaries) that our model can understand.
+The project uses the **Flickr8k** dataset, a standard benchmark dataset for image captioning:
+-  8,000 real-world images
+-  Each image is paired with 5 human-written captions
 
-2️- Turning Features into Words with RNN (LSTM)
-Now, we need to turn those image patterns into words. Our LSTM (a type of RNN) will act like a storyteller. It will take the image’s features and start forming a sentence—one word at a time—predicting what comes next based on what it has seen so far.
+###  Download Instructions
+Since the dataset is large, it's not included in the repository. Please download manually:
 
-3️- Building the Full Captioning Model
-This is where we connect the dots! The CNN extracts features, passes them to the LSTM, and the LSTM generates captions. The goal? Train this model so it learns to describe images just like a human would
-In This Week i am working to build this model which aligns to requirements of my project.
+- https://www.kaggle.com/datasets/aladdinpersson/flickr8kimagescaptions
 
-latest update 3-2-2025
-i have worked on model building using transfrormers, i have used CNN as encoder and rnn and decoder.
-then i have worked on traing the model.
-while traing the model i have triggered multile problems majorly training it, the epoches are more and due to model complexity each epoch traing taking longer time then usual.
+Place the unzipped folders in the following directory structure:
 
-NOTE :-
-hey professor when iam uploading my code source file to github, its uploading perfectly fine but when i open that file its not opening its sayinng "Unable to render code block"
+```
+data/
+├── Flickr8k_Dataset/
+├── Flickr8k_text/
+```
 
-i would like to scedule meeting regarding this problem even last week i couldnt resolve this.
+---
+
+## ⚙ How to Run / Interact / Reproduce
+
+###  Step 1: Clone the Repository
+```bash
+git clone https://github.com/Sai-Chandra-Sriramula/Sriramula-B00116842-Fall-2025.git
+cd Sriramula-B00116842-Fall-2025
+```
+
+###  Step 2: Install Required Libraries
+```bash
+pip install tensorflow numpy matplotlib pillow
+```
+
+###  Step 3: Prepare the Dataset
+
+After downloading and extracting the dataset files into the `data/` directory, ensure the following paths exist:
+```
+data/
+├── Flickr8k_Dataset/      # Contains .jpg image files
+├── Flickr8k_text/         # Contains captions.txt
+```
+
+###  Step 4: Run the Notebooks
+
+Launch the following notebooks to run the full pipeline:
+
+- `src/image-captioning Final Models.ipynb`  
+   Contains preprocessing, feature extraction using 3 CNNs, and training with BLEU evaluation
+
+- `src/image-caption-attention.ipynb`  
+   Focuses on using attention during caption generation and visualizing attention weights
+
+---
+
+##  If Data is Too Big for `data/` Directory
+
+If you're unable to store the dataset in your local repo:
+- Download the dataset using the links above
+- Extract the files externally and **point the notebook paths** to the correct folder location
+
+---
+
